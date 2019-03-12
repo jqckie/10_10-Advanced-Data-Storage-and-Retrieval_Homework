@@ -11,16 +11,9 @@ import logging
 logging.basicConfig()
 logging.getLogger('sqlalchemy.engine').setLevel(logging.DEBUG)
 
-# Reminder:
-# cd to this directory before running this code in vscode.
-
 #################################################
 # Database Setup
 #################################################
-# Web sites use threads, but sqlite is not thread-safe.
-# These parameters will let us get around it.
-# However, it is recommended you create a new Engine, Base, and Session
-#   for each thread (each route call gets its own thread)
 engine = (create_engine("sqlite:///Resources/hawaii.sqlite", 
 connect_args={'check_same_thread':False},
    poolclass=StaticPool))
@@ -141,5 +134,3 @@ def start_end(start,end):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-"""sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file (Background on this error at: http://sqlalche.me/e/e3q8)"""
