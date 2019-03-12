@@ -1,4 +1,4 @@
-# SQLAlchemy Weather Reports
+# SQLAlchemy Weather Reports and FLASK app
 
 ## Instructions
 * Run [climate_analysis.ipynb](SurfsUp/climate_analysis.ipynb) to analyze [hawaii.sqlite](Resources/hawaii.sqlite)
